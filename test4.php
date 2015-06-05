@@ -6,6 +6,9 @@
 	<title>test page</title>
 </head>
 <body>
-
+	<?php
+		echo "test";
+	?>
+	<p>test content</p>
 </body>
 </html>
