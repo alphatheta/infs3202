@@ -7,7 +7,7 @@
 </head>
 <body>
 	<?php
-		echo "test";
+		phpinfo();
 	?>
 	<p>test content</p>
 </body>
