@@ -11,9 +11,6 @@
 	$user = "asabri@xdsv8dafke";
 	$pwd = "8377394201w$";
 	$db = "infs3202db";
-
-	
-	echo "test1";
 	try{
 		$conn = new PDO( "sqlsrv:Server= $server; Database = $db", $user, $pwd);
 		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -21,7 +18,11 @@
 	catch(Exception $e){
 		die(print_r($e));
 	}
-	echo "test3";
+
+	$query = "SELECT * FROM dbo.Comments";
+	foreach($conn->query($query) as $row) {
+		print $row['place_id'].",".$row['text'];
+	}
 	?>
 	<p>test content</p>
 </body>
