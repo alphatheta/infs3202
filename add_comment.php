@@ -1,13 +1,13 @@
 <?php
 	$q = $_GET['q'];
 	$t = $_GET['t'];
-	$conn = mysqli_connect('localhost', 'admin', 'password', 'comments');
+	$conn = mysqli_connect('tcp:xdsv8dafke.database.windows.net,1433', 'asabri', '8377394201w$', 'dbo');
 	
 	if (!$conn) {
 		die('Could not connect: ' . mysqli_error($conn));
 	}
 
-	$query="INSERT INTO `comments`.`Comments` (`id`, `place_id`, `text`) VALUES (NULL, '$q', '$t')";
+	$query="INSERT INTO `dbo`.`Comments` (`id`, `place_id`, `text`) VALUES (NULL, '$q', '$t')";
 	mysqli_query($conn, $query);
 
 	echo "<li class=\"comments\">" . $t . "</li>";
