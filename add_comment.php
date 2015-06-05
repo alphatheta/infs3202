@@ -15,7 +15,7 @@
 	}
 
 	$query="INSERT INTO dbo.Comments (place_id, text) VALUES ('$q', '$t')";
-	$conn->$query;
+	$conn->query($query);
 
 	echo "<li class=\"comments\">" . $t . "</li>";
 	
