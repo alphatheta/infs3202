@@ -6,6 +6,7 @@
 	<title>test page</title>
 </head>
 <body>
+<!--
 	<?php
 	$server = "tcp:xdsv8dafke.database.windows.net,1433";
 	$user = "asabri"@xdsv8dafke;
@@ -21,5 +22,5 @@
 		die(print_r($e));
 	}
 	echo "test2";
-	?>
+	?> -->
 </body>
