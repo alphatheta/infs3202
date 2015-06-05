@@ -143,7 +143,7 @@
 			
 			cstr = "p" + index.toString();
 			ctid = "t" + index.toString();
-			ctext = document.getElementById("t0").value;
+			ctext = document.getElementById(ctid).value;
 			pid = placeIDs[index];
 			
 			xmlhttp.onreadystatechange=function() {
