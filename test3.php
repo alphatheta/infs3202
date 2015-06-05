@@ -1,16 +1,16 @@
 <?php
-$server = "tcp:<xdsv8dafke.database.windows.net,1433>";
-$user = "<asabri>"@xdsv8dafke;
+$server = "tcp:xdsv8dafke.database.windows.net,1433";
+$user = "asabri"@xdsv8dafke;
 $pwd = "8377394201w$";
 $db = "infs3202db";
 
-$conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
-echo "test 2";
-if($conn === false){
-    die(print_r(sqlsrv_errors()));
-} else {
-	echo "test";
+echo "test1";
+try{
+    $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
-
-
+catch(Exception $e){
+    die(print_r($e));
+}
+echo "test2";
 ?>
