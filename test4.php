@@ -12,6 +12,7 @@
 	$pwd = "8377394201w$";
 	$db = "infs3202db";
 
+	
 	echo "test1";
 	try{
 		$conn = new PDO( "sqlsrv:Server= $server; Database = $db", $user, $pwd);
@@ -20,7 +21,7 @@
 	catch(Exception $e){
 		die(print_r($e));
 	}
-	echo "test2";
+	echo "test3";
 	?>
 	<p>test content</p>
 </body>
