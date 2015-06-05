@@ -19,8 +19,6 @@
 	}
 	catch(Exception $e){
 		die(print_r($e));
-	} else {
-		echo "it's actually working";
 	}
 	?>
 	<p>test content</p>
