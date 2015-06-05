@@ -20,6 +20,7 @@
 	catch(Exception $e){
 		die(print_r($e));
 	}
+	echo "test2";
 	?>
 	<p>test content</p>
 </body>
