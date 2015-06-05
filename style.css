@@ -1,0 +1,93 @@
+html, body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+	width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+	width: 100%;
+	background-color: #000000;
+	color: #ffffff;
+	padding: 5px;
+	font-weight: bold;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header a:link {
+    color: #ff0000;
+}
+
+header a:visited {
+    color: #ff0000;
+}
+
+header a:hover {
+    color: #ff0000;
+}
+
+header a:active {
+    color: #ff0000;
+}
+
+#map-canvas {
+	float: left;
+	height: 94%;
+	width: 70%;
+}
+
+#places {
+	float: left;
+	height: 94%;
+	width: 29%;
+	margin: 0px;
+	padding-left: 10px;
+}
+
+#places h1 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 19.3999996185303px;
+}
+
+#places h3 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 14.3999996185303px;
+}
+
+#places li {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.comments {
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+}
+
+#window {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold; 
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td{
+	border: 1px solid black;
+	padding: 3px;
+}
