@@ -1,14 +1,21 @@
 <?php
 	$q = $_GET['q'];
 	$t = $_GET['t'];
-	$conn = mysqli_connect('xdsv8dafke.database.windows.net,1433', 'asabri', '8377394201w$', 'infs3202db');
+	$server = "tcp:xdsv8dafke.database.windows.net,1433";
+	$user = "asabri@xdsv8dafke";
+	$pwd = "8377394201w$";
+	$db = "infs3202db";
 	
-	if (!$conn) {
-		die('Could not connect:addcomment test ' . mysqli_error($conn));
+	try{
+		$conn = new PDO( "sqlsrv:Server= $server; Database = $db", $user, $pwd);
+		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+	}
+	catch(Exception $e){
+		die(print_r($e));
 	}
 
-	$query="INSERT INTO `dbo`.`Comments` (`place_id`, `text`) VALUES ('$q', '$t')";
-	mysqli_query($conn, $query);
+	$query="INSERT INTO dbo.Comments (place_id, text) VALUES ('$q', '$t')";
+	$conn->$query;
 
 	echo "<li class=\"comments\">" . $t . "</li>";
 	
