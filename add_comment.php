@@ -7,7 +7,7 @@
 		die('Could not connect: ' . mysqli_error($conn));
 	}
 
-	$query="INSERT INTO `dbo`.`Comments` (`id`, `place_id`, `text`) VALUES (NULL, '$q', '$t')";
+	$query="INSERT INTO `dbo`.`Comments` (`place_id`, `text`) VALUES ('$q', '$t')";
 	mysqli_query($conn, $query);
 
 	echo "<li class=\"comments\">" . $t . "</li>";
