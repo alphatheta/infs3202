@@ -13,7 +13,7 @@
 		die(print_r($e));
 	}
 
-	$query="SELECT * FROM dbo.`Comments WHERE place_id = '".$q."'";
+	$query="SELECT * FROM dbo.Comments WHERE place_id = '".$q."'";
 	$result = $conn->query($query);
 
 	echo "<h3>Comments</h3>";
