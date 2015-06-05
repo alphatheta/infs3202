@@ -6,7 +6,6 @@
 	<title>Page Visit Counter</title>
 </head>
 <body>
-	<h1>This page refreshes every 2 seconds!</h1>
 	<?php
 		$count_my_page = ("counter.txt");
 		$hits = file($count_my_page);
@@ -14,8 +13,9 @@
 		$fp = fopen($count_my_page , "w");
 		fputs($fp , "$hits[0]");
 		fclose($fp);
-		echo $hits[0];
+		echo "<h1> Total number of visits: ".$hits[0]."</h1>";
 		header("Refresh: 2;");
 	?>
+	<h2>This page auto-refreshes every 2 seconds</h2>
 </body>
 </html>
